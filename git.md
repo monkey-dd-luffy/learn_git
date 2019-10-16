@@ -95,4 +95,38 @@ git branch branch-name
 ```
 git checkout branch-name
 ```
+## Example: Basic Branching and Merging
+working on the master branch and decide to work on issue #53
+```
+git checkout -b iss53
+do some work
+git commit -a -m 'added a new footer [issue 53]'
+git checkout master
+get a hotfix
+git checkout -b hotfix
+do some work
+git commit -a -m 'fixed the broken email address'
+git checkout master
+git merge hotfix
+git branch -d hotfix
+git checkout iss53
+do some work
+git commit -a -m 'finished the new footer [issue 53]'
+git checkout master
+git merge iss53
+git branch -d iss53
+```
+
+## Basic Merge Conflicts
+```
+git branch --merged
+git branch --no-merged
+git branch --no-merged master
+```
+
+## Branching Workflows
+
+
+
+
 
