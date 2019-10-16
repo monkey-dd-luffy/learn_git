@@ -76,6 +76,7 @@ git push origin --tags
 ## Checking out tags
 ```
 git checkout tag_name
+```
 
 # Git Aliases
 ```
@@ -84,3 +85,8 @@ git checkout == git co
 ```
 
 # Git Branching
+
+## Creating a New Branch
+```
+git branch branch-name
+```
