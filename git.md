@@ -68,3 +68,19 @@ git tag -a v1.4 -m "my version 1.4"
 git tag show v1.4
 ```
 
+## Sharing Tags
+```
+git push origin v1.5
+git push origin --tags
+```
+## Checking out tags
+```
+git checkout tag_name
+
+# Git Aliases
+```
+git config --global alias.co checkout
+git checkout == git co
+```
+
+# Git Branching
