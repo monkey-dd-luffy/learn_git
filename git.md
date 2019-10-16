@@ -49,5 +49,22 @@ git clone <url>
 git remote [-v]
 git remote add <shortname> <url>
 git fetch <remote>
+git push origin master
+git remote show origin
+git remote rename old_name new_name
+git remote remove remote_name
+```
+# Tagging
 
+## Listing Your Tags
+```
+git tag
+git tag -l "v1.8.5*"
+```
+
+## Creating Tags
+```
+git tag -a v1.4 -m "my version 1.4"
+git tag show v1.4
+```
 
