@@ -90,3 +90,9 @@ git checkout == git co
 ```
 git branch branch-name
 ```
+
+## Switching Branches
+```
+git checkout branch-name
+```
+
