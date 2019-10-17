@@ -190,6 +190,37 @@ git branch -vv
 git fetch --all; git branch -vv
 ```
 #### pulling
+```
+git pull
+```
+pull down changes on the server and commit. It is recommended to use git fetch + git merge instead
+
+#### deleting remote branches
+```
+git push origin --delete branchname
+```
+
+#### Rebasing
+```
+git rebase branch-to-base-on
+git rebase <basebranch> <topicbranch>
+```
+
+* do not rebase commits that exist outside your repository
+
+# GitHub
+## SSH Access
+
+## Workflow
+* Fork the project
+* Create a topic branch from master
+* Make some commits to improve the project
+* Push this branch to your GitHub project
+* Open a Pull Request on GitHub
+* Discuss, and optionally continue committing
+* The project owner merges or closes the Pull Request
+
+
 
 
 
