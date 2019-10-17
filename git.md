@@ -125,6 +125,72 @@ git branch --no-merged master
 ```
 
 ## Branching Workflows
+### Long-Running Branches
+* master branch: the stable/release version
+* develop/next branch: the unstable version, will merge to master after testing
+### Topic Branches
+short-lived branch that you create and use for a single particular feature or related work. deleted after merging with master
+
+### Remote Branches
+* list full list of remote references
+```
+git ls-remote [remote]
+git remote show [remote]
+```
+Remote branches take the form <remote>/<branch>, e.g. origin/master
+
+* clone remote
+``` 
+git clone
+```
+automatically create remote origin and local branch master, which is different from origin/master
+
+* synchronize with remote
+```
+git fetch origin
+```
+get new data and move origin/master to its new position
+
+* pushing
+```
+git push <remote> <branch>
+git push <remote> <local branch name>:<remote branch name>
+```
+when you fetch a remote and get a new branch, it is not locally branch, only a pointer to the remote branch. you need to
+* merge it into your working branch
+```
+git merge origin/newbranch
+```
+* create your own local branch based off this remote branch
+```
+git checkout -b localbranch origin/newbranch
+```
+
+#### tracking branches
+```
+git checkout --track origin/serverfix
+git checkout -b localbranch origin/serverbranch
+```
+creates a tracking branch. so then you do git pull, Git automatically knows which server to fetch from and branch to merge into
+
+when you clone a remote, master tracks remote/master
+```
+git branch -u origin/serverfix
+```
+use a existing local branch to track remote branch
+
+* reference a tracking/upstream branch
+```
+@{u}
+git merge @{u}
+```
+* show upstream branches
+```
+git branch -vv
+git fetch --all; git branch -vv
+```
+#### pulling
+
 
 
 
